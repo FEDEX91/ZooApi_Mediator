@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using ZooApi_Mediator.Features.Bird.Queries;
+using ZooApi_Mediator.Application.Features.Bird.Queries;
 
-namespace ZooApi_Mediator.Controllers
+namespace ZooApi_Mediator.WebAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -12,7 +12,7 @@ namespace ZooApi_Mediator.Controllers
 
         public BirdController(IMediator mediator)
         {
-            this._mediator = mediator;
+            _mediator = mediator;
         }
 
         [HttpGet]

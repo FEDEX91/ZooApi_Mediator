@@ -1,7 +1,7 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using ZooApi_Mediator.Data;
-using ZooApi_Mediator.Interfaces;
+using ZooApi_Mediator.Domain.Interfaces;
+using ZooApi_Mediator.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

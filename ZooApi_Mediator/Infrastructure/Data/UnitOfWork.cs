@@ -1,8 +1,8 @@
-﻿
-using ZooApi_Mediator.Entities;
-using ZooApi_Mediator.Interfaces;
+﻿using ZooApi_Mediator.Domain.Entities;
+using ZooApi_Mediator.Domain.Interfaces;
+using ZooApi_Mediator.Infrastructure.Data.Repositories;
 
-namespace ZooApi_Mediator.Data
+namespace ZooApi_Mediator.Infrastructure.Data
 {
     public class UnitOfWork : IUnitOfWork
     {

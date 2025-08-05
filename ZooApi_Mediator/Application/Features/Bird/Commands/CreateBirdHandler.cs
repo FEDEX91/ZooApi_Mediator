@@ -1,10 +1,9 @@
 ﻿using MediatR;
-using ZooApi_Mediator.Entities;
-using ZooApi_Mediator.Interfaces;
+using ZooApi_Mediator.Domain.Interfaces;
 
-namespace ZooApi_Mediator.Features.Bird.Commands
+namespace ZooApi_Mediator.Application.Features.Bird.Commands
 {
-    public class CreateBirdHandler : IRequestHandler<CreateBirdCommand, ZooApi_Mediator.Entities.Bird>
+    public class CreateBirdHandler : IRequestHandler<CreateBirdCommand, Domain.Entities.Bird>
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -12,9 +11,9 @@ namespace ZooApi_Mediator.Features.Bird.Commands
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<Entities.Bird> Handle(CreateBirdCommand request, CancellationToken cancellationToken)
+        public async Task<Domain.Entities.Bird> Handle(CreateBirdCommand request, CancellationToken cancellationToken)
         {
-            var bird = new ZooApi_Mediator.Entities.Bird
+            var bird = new Domain.Entities.Bird
             {
                 Name = "test"
             };

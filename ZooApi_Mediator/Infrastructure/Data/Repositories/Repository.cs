@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ZooApi_Mediator.Interfaces;
+using ZooApi_Mediator.Domain.Interfaces;
+using ZooApi_Mediator.Infrastructure.Data;
 
-namespace ZooApi_Mediator.Data
+namespace ZooApi_Mediator.Infrastructure.Data.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {

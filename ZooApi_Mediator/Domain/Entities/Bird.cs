@@ -1,4 +1,4 @@
-﻿namespace ZooApi_Mediator.Entities
+﻿namespace ZooApi_Mediator.Domain.Entities
 {
     public class Bird
     {
