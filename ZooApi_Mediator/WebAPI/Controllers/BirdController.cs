@@ -4,16 +4,9 @@ using ZooApi_Mediator.Application.Features.Bird.Queries;
 
 namespace ZooApi_Mediator.WebAPI.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class BirdController : ControllerBase
+    public class BirdController(IMediator mediator) : BaseApiController
     {
-        private readonly IMediator _mediator;
-
-        public BirdController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+        private readonly IMediator _mediator = mediator;
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
