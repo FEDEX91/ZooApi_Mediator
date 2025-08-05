@@ -6,12 +6,10 @@ namespace ZooApi_Mediator.WebAPI.Controllers
 {
     public class BirdController(IMediator mediator) : BaseApiController
     {
-        private readonly IMediator _mediator = mediator;
-
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var birds = await _mediator.Send(new GetBirdQuery());
+            var birds = await mediator.Send(new GetBirdQuery());
             return Ok(birds);
         }
     }
