@@ -1,4 +1,4 @@
-﻿namespace ZooApi_Mediator.Data
+﻿namespace ZooApi_Mediator.Interfaces
 {
     public interface IRepository<T> where T : class
     {

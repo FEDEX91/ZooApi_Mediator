@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ZooApi_Mediator.Interfaces;
 
 namespace ZooApi_Mediator.Data
 {

@@ -1,5 +1,6 @@
 ﻿
 using ZooApi_Mediator.Entities;
+using ZooApi_Mediator.Interfaces;
 
 namespace ZooApi_Mediator.Data
 {

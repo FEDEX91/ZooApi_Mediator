@@ -1,9 +1,7 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using ZooApi_Mediator.Data;
-using ZooApi_Mediator.Features.Bird.Queries;
 using ZooApi_Mediator.Interfaces;
-using ZooApi_Mediator.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +13,6 @@ builder.Services.AddDbContext<DataContext>(options =>
 });
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<IBirdRepository, BirdRepository>();
 
 builder.Services.AddMediatR(cfg =>
 {

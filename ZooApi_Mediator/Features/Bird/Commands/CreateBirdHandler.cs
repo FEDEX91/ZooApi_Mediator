@@ -1,6 +1,6 @@
 ﻿using MediatR;
-using ZooApi_Mediator.Data;
 using ZooApi_Mediator.Entities;
+using ZooApi_Mediator.Interfaces;
 
 namespace ZooApi_Mediator.Features.Bird.Commands
 {

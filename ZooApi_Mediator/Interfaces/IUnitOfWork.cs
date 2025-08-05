@@ -1,6 +1,6 @@
 ﻿using ZooApi_Mediator.Entities;
 
-namespace ZooApi_Mediator.Data
+namespace ZooApi_Mediator.Interfaces
 {
     public interface IUnitOfWork
     {
