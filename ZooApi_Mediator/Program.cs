@@ -1,5 +1,6 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using ZooApi_Mediator.Application.Helpers;
 using ZooApi_Mediator.Domain.Interfaces;
 using ZooApi_Mediator.Infrastructure.Data;
 
@@ -10,6 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AddMaps(typeof(Program).Assembly);
 });
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
