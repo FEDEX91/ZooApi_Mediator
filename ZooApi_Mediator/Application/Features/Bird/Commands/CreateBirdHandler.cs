@@ -16,9 +16,9 @@ namespace ZooApi_Mediator.Application.Features.Bird.Commands
         {
             var bird = new Domain.Entities.Bird
             {
-                Name = request.Name,
-                Description = request.Description,
-                PhotoUrl = request.PhotoUrl,
+                Name = request.BirdDto.Name,
+                Description = request.BirdDto.Description,
+                PhotoUrl = request.BirdDto.PhotoUrl,
             };
 
             await _unitOfWork.Birds.AddAsync(bird);

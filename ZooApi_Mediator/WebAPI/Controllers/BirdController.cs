@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using ZooApi_Mediator.Application.DTOs;
 using ZooApi_Mediator.Application.Features.Bird.Commands;
 using ZooApi_Mediator.Application.Features.Bird.Queries;
 
@@ -15,9 +16,9 @@ namespace ZooApi_Mediator.WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CreateBirdCommand command)
+        public async Task<IActionResult> Create([FromBody]BirdDto birdDto)
         {
-            var bird = await mediator.Send(command);
+            var bird = await mediator.Send(new CreateBirdCommand(birdDto));
             return Ok(bird);
         }
     }
