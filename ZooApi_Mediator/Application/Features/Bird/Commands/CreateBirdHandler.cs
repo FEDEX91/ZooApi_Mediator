@@ -5,16 +5,11 @@ using ZooApi_Mediator.Domain.Interfaces;
 
 namespace ZooApi_Mediator.Application.Features.Bird.Commands
 {
-    public class CreateBirdHandler : IRequestHandler<CreateBirdCommand, BirdDto>
+    public class CreateBirdHandler(IUnitOfWork unitOfWork, IMapper mapper) : IRequestHandler<CreateBirdCommand, BirdDto>
     {
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork = unitOfWork;
+        private readonly IMapper _mapper = mapper;
 
-        public CreateBirdHandler(IUnitOfWork unitOfWork, IMapper mapper)
-        {
-            _unitOfWork = unitOfWork;
-            _mapper = mapper;
-        }
         public async Task<BirdDto> Handle(CreateBirdCommand request, CancellationToken cancellationToken)
         {
             var bird = this._mapper.Map<Domain.Entities.Bird>(request.BirdDto);
