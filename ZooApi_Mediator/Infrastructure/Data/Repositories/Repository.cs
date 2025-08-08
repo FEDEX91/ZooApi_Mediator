@@ -25,16 +25,19 @@ namespace ZooApi_Mediator.Infrastructure.Data.Repositories
            return await _dbSet.ToListAsync();
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T?> GetByIdAsync(int id)
         {
-            var item = await _dbSet.FindAsync(id);
-            if (item is null) throw new Exception($"{id} not found");
-            return item; 
+            return await _dbSet.FindAsync(id); 
         }
 
         public void Remove(T entity)
         {
             _dbSet.Remove(entity);
+        }
+
+        public void Update(T entity)
+        {
+            _dbSet.Update(entity);
         }
     }
 }
