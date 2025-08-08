@@ -15,3 +15,6 @@ Once you've updated the connection string, open a terminal in Visual Studio and 
 
 1. dotnet ef migrations add InitDb
 2. dotnet ef database update
+
+<img width="1517" height="699" alt="image" src="https://github.com/user-attachments/assets/72bc47d5-cbdd-4d0a-89f3-a5c47777be1a" />
+
