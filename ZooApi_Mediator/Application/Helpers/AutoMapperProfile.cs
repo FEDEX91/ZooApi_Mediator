@@ -10,6 +10,8 @@ namespace ZooApi_Mediator.Application.Helpers
         {
             CreateMap<BirdDto, Bird>();
             CreateMap<Bird, BirdDto>();
+            CreateMap<BirdSingleDto, Bird>();
+            CreateMap<Bird, BirdSingleDto>();
         }
     }
 }

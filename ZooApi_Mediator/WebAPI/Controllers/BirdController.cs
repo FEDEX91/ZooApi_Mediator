@@ -15,6 +15,14 @@ namespace ZooApi_Mediator.WebAPI.Controllers
             return Ok(birds);
         }
 
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var bird = await mediator.Send(new GetBirdByIdQuery(id));
+            if (bird is null) return NotFound($"Record id {id} not found.");
+            return Ok(bird);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Create([FromBody]BirdDto birdDto)
         {
@@ -22,23 +30,20 @@ namespace ZooApi_Mediator.WebAPI.Controllers
             return Ok(bird);
         }
 
-        [HttpDelete]
-        public async Task<IActionResult> Delete([FromQuery]int id)
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Delete(int id)
         {
             var result = await mediator.Send(new DeleteBirdCommand(id));
             if (!result) return NotFound($"Record id {id} not found.");
             return NoContent();
         }
 
-        [HttpPut]
+        [HttpPut("{id:int}")]
         public async Task<IActionResult> Update(int id, [FromBody]BirdDto birdDto)
         {
             birdDto.Id = id;
-
             var result = await mediator.Send(new UpdateBirdCommand(birdDto));
-
             if (result is null) return NotFound($"Record id {id} not found.");
-
             return NoContent();
         }
     }
