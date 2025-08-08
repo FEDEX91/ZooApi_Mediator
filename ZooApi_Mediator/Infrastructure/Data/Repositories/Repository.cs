@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ZooApi_Mediator.Domain.Interfaces;
-using ZooApi_Mediator.Infrastructure.Data;
 
 namespace ZooApi_Mediator.Infrastructure.Data.Repositories
 {

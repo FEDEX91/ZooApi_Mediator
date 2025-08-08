@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using MediatR;
+﻿using MediatR;
 using ZooApi_Mediator.Application.DTOs;
 using ZooApi_Mediator.Domain.Interfaces;
 
