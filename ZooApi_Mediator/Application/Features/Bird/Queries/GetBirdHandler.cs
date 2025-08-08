@@ -1,17 +1,17 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
+using ZooApi_Mediator.Application.DTOs;
 using ZooApi_Mediator.Domain.Interfaces;
 
 namespace ZooApi_Mediator.Application.Features.Bird.Queries
 {
-    public class GetBirdHandler(IUnitOfWork unitOfWork) : IRequestHandler<GetBirdQuery, IEnumerable<Domain.Entities.Bird>>
+    public class GetBirdHandler(IUnitOfWork unitOfWork, IMapper mapper) : IRequestHandler<GetBirdQuery, IEnumerable<BirdSingleDto>>
     {
-        private readonly IUnitOfWork _unitOfWork = unitOfWork;
-
-        public async Task<IEnumerable<Domain.Entities.Bird>> Handle(GetBirdQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<BirdSingleDto>> Handle(GetBirdQuery request, CancellationToken cancellationToken)
         {
-            var birds = await _unitOfWork.Birds.GetAllAsync();
-
-            return birds;
+            var birds = await unitOfWork.Birds.GetAllAsync();
+            var result = mapper.Map<IEnumerable<BirdSingleDto>>(birds);
+            return result;
         }
     }
 }
