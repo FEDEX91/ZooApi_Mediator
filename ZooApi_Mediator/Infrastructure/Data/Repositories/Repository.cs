@@ -31,5 +31,10 @@ namespace ZooApi_Mediator.Infrastructure.Data.Repositories
             if (item is null) throw new Exception($"{id} not found");
             return item; 
         }
+
+        public void Remove(T entity)
+        {
+            _dbSet.Remove(entity);
+        }
     }
 }

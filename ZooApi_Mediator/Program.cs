@@ -1,6 +1,5 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using ZooApi_Mediator.Application.Helpers;
 using ZooApi_Mediator.Domain.Interfaces;
 using ZooApi_Mediator.Infrastructure.Data;
 

@@ -21,5 +21,13 @@ namespace ZooApi_Mediator.WebAPI.Controllers
             var bird = await mediator.Send(new CreateBirdCommand(birdDto));
             return Ok(bird);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await mediator.Send(new DeleteBirdCommand(id));
+            if (!result) return NotFound($"Id {id} not found.");
+            return NoContent();
+        }
     }
 }
