@@ -8,14 +8,15 @@ namespace ZooApi_Mediator.Infrastructure.Data
     {
         private readonly DataContext _context;
         public IRepository<Bird> Birds { get; }
+        public IRepository<Fish> Fishes { get; }
 
         public UnitOfWork(DataContext context)
         {
             _context = context;
             Birds = new Repository<Bird>(_context);
+            Fishes = new Repository<Fish>(_context);
         }
       
-
         public async Task<int> SaveChangesAsync()
         {
             return await _context.SaveChangesAsync();

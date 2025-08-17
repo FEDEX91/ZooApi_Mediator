@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Application\Features\Fish\Command\" />
     <Folder Include="Application\Services\" />
   </ItemGroup>
 
