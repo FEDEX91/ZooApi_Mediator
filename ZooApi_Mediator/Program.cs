@@ -1,4 +1,4 @@
-using ZooApi_Mediator.Infrastructure.Extensions;
+using ZooApi_Mediator.Presentation.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

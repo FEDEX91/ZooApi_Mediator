@@ -2,7 +2,7 @@
 using ZooApi_Mediator.Domain.Interfaces;
 using ZooApi_Mediator.Infrastructure.Data;
 
-namespace ZooApi_Mediator.Infrastructure.Extensions
+namespace ZooApi_Mediator.Presentation.Extensions
 {
     public static class ServiceCollectionExtensions
     {
