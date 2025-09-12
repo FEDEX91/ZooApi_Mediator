@@ -18,3 +18,10 @@ Once you've updated the connection string, open a terminal in Visual Studio and 
 
 <img width="1517" height="699" alt="image" src="https://github.com/user-attachments/assets/72bc47d5-cbdd-4d0a-89f3-a5c47777be1a" />
 
+This project includes unit test:
+
+We used nUnit and Moq to test all the controllers, feel free to review our code.
+
+<img width="923" height="400" alt="image" src="https://github.com/user-attachments/assets/db9c2de2-21f2-4214-8a07-5944bd2cc732" />
+
+
