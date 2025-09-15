@@ -10,10 +10,16 @@ namespace ZooApi_Mediator.Presentation.Extensions
         {
             services.AddControllers();
 
-            services.AddDbContext<DataContext>(options =>
+            var useInMemoryDb = Convert.ToBoolean(Environment.GetEnvironmentVariable("USE_IN_MEMORY_DB"));
+
+            if (!useInMemoryDb)
             {
-                options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
-            });
+                var connectionString = config.GetConnectionString("DefaultConnection");
+                services.AddDbContext<DataContext>(options =>
+                {
+                    options.UseSqlServer(connectionString);
+                });
+            }
 
             services.AddAutoMapper(cfg =>
             {
