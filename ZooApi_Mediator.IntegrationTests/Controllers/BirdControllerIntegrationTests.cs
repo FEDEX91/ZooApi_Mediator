@@ -13,7 +13,6 @@ namespace ZooApi_Mediator.IntegrationTests.Controllers
             // Act
             var response = await _client.GetAsync("/api/bird");
             response.EnsureSuccessStatusCode();
-
             var birds = await response.Content.ReadFromJsonAsync<List<Bird>>();
 
             // Assert

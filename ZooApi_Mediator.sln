@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36109.1
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11010.61 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooApi_Mediator", "ZooApi_Mediator\ZooApi_Mediator.csproj", "{5A2E090C-3F7C-465E-AA45-FFF54F8BA470}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooApi_Mediator.Tests", "ZooApi_Mediator.Tests\ZooApi_Mediator.Tests.csproj", "{8B30AC68-FA4A-4E42-8E46-B2C7939F0E81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooApi_Mediator.UnitTests", "ZooApi_Mediator.Tests\ZooApi_Mediator.UnitTests.csproj", "{8B30AC68-FA4A-4E42-8E46-B2C7939F0E81}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooApi_Mediator.IntegrationTests", "ZooApi_Mediator.IntegrationTests\ZooApi_Mediator.IntegrationTests.csproj", "{8B9563C6-1772-4F6A-9C27-8DE02623543D}"
 EndProject
